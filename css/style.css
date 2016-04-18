@@ -10,7 +10,8 @@
   .clearfix:after {
     clear: both; }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%; }
 
@@ -34,15 +35,20 @@ a {
   text-decoration: none;
   color: #fff; }
 
+.noscroll {
+  overflow: hidden; }
+
 .wrapper {
-  width: 80%;
+  width: 1024px;
   margin: 0 auto; }
 
 header {
   position: absolute;
   z-index: 100;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   left: 0;
   width: 100vw;
   text-align: center; }
@@ -102,7 +108,9 @@ section .section-title {
         position: absolute;
         top: -15px;
         left: 50%;
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
         width: 50px;
         height: 3px;
         background-color: #8B8981; }
@@ -132,25 +140,31 @@ section .section-title {
       padding: 15px; }
       .portfolio-pieces ul li a:hover .hover {
         opacity: 1;
-        transform: translateY(-50%) rotateY(0deg); }
+        -webkit-transform: translateY(-50%) rotateY(0deg);
+                transform: translateY(-50%) rotateY(0deg); }
       .portfolio-pieces ul li a:hover img {
-        transform: translateY(-50%) rotateY(180deg); }
+        -webkit-transform: translateY(-50%) rotateY(180deg);
+                transform: translateY(-50%) rotateY(180deg); }
       .portfolio-pieces ul li a img {
         position: relative;
         top: 50%;
-        transform: translateY(-50%) rotateY(0deg);
-        transition: all 0.3s ease-in-out; }
+        -webkit-transform: translateY(-50%) rotateY(0deg);
+                transform: translateY(-50%) rotateY(0deg);
+        -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out; }
   .portfolio-pieces .hover {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) rotateY(180deg);
+    -webkit-transform: translateY(-50%) rotateY(180deg);
+            transform: translateY(-50%) rotateY(180deg);
     z-index: 4;
     width: calc(100% - 30px);
     height: calc(100% - 40px);
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 100%;
     opacity: 0;
-    transition: all 0.3s ease-in-out; }
+    -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out; }
     .portfolio-pieces .hover h1 {
       position: absolute;
       top: 50%;
@@ -159,6 +173,54 @@ section .section-title {
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       z-index: 5;
-      color: #fff; }
+      color: #fff;
+      text-align: center; }
+  .portfolio-pieces .project-img {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    z-index: 150;
+    background: rgba(0, 0, 0, 0.5); }
+    .portfolio-pieces .project-img figure {
+      width: 100%;
+      height: auto; }
+      .portfolio-pieces .project-img figure img {
+        width: 75%;
+        height: auto;
+        display: block;
+        margin: 0 auto; }
+    .portfolio-pieces .project-img .exit-container {
+      position: fixed;
+      right: 50px;
+      top: 25px;
+      height: 50px;
+      width: 50px;
+      cursor: pointer; }
+      .portfolio-pieces .project-img .exit-container .exit {
+        position: absolute;
+        top: 50%;
+        height: 3px;
+        width: 50px;
+        background: #fff;
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg); }
+        .portfolio-pieces .project-img .exit-container .exit:after {
+          content: "";
+          position: absolute;
+          height: 3px;
+          width: 50px;
+          background: #fff;
+          -webkit-transform: rotate(90deg);
+              -ms-transform: rotate(90deg);
+                  transform: rotate(90deg); }
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    max-width: 80%; } }
 
 /*# sourceMappingURL=style.css.map */
