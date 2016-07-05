@@ -21,8 +21,8 @@ $('.exit-container').click(function () {
     $('body').removeClass('noscroll');
 });
 
-$('nav a').click(function (e) {
-    //e.preventDefault();
+$('nav li:nth-child(n+2) a').click(function (e) {
+    e.preventDefault();
     var $section = $(this).attr("href");
     var sectionPos = $($section).offset().top;
 
