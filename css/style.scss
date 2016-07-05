@@ -120,16 +120,25 @@ header {
     position: absolute;
     z-index: 100;
     left: 0;
-    transform: translate(0,-50%);
-    top: 50px;
     width: 100vw;
     text-align: right;
-    padding-right: 50px;
+    padding: 25px 50px 0 50px;
     transition: all 0.3s ease-in-out;
+    
+    nav{
+        position: relative;
+    }
     h1 {
         margin: 20px 0;
         font-size: 6em;
         color: #000;
+    }
+    
+    ul {
+        position: absolute;
+        right: 0;
+        @include center(vertical);
+        top: 30%;
     }
     li {
         display: inline-block;
@@ -140,6 +149,12 @@ header {
             color: #000;
         }
     }
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    float: left;
 }
 
 .hero {
